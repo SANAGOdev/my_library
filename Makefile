@@ -33,7 +33,7 @@ NAME = library
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME).a $(OBJ)
-	@mv $(NAME).a ../
+#@mv $(NAME).a ../
 	@echo -e "\033[32m[OK]\033[0m": $(NAME)
 
 all: $(NAME)
@@ -45,7 +45,8 @@ clean:
 	@echo -e "\033[31m[RM]\033[0m": $(OBJ)
 
 fclean: clean
-	@rm -f ../$(NAME).a
+#@rm -f ../$(NAME).a
+	@rm -f $(NAME).a
 	@echo -e "\033[31m[RM]\033[0m": $(NAME)
 
 re: fclean all
